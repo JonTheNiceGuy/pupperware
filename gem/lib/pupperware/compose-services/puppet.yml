@@ -22,7 +22,7 @@ services:
       - CERT_SRCDIR=puppet-oss
       - CERT_DESTDIR=ssl
     volumes:
-      - puppetserver-code:/etc/puppetlabs/code/
+      - /etc/puppetlabs/code:/etc/puppetlabs/code/
       - puppetserver-config:/etc/puppetlabs/puppet/
       - puppetserver-ca:/etc/puppetlabs/puppetserver/ca
       - puppetserver-data:/opt/puppetlabs/server/data/puppetserver/
@@ -32,7 +32,6 @@ services:
       - 8170:8170
 
 volumes:
-  puppetserver-code:
   puppetserver-config:
   puppetserver-ca:
   puppetserver-data:
